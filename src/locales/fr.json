@@ -1,0 +1,158 @@
+{
+  "brand": "Forsa",
+  "nav": {
+    "search": "Rechercher un vêtement",
+    "cart": "articles",
+    "favorites": "Favoris",
+    "notifications": "Notifications",
+    "login": "Connexion",
+    "profile": "Profil"
+  },
+  "home": {
+    "categories": "Catégories",
+    "categoriesSubtitle": "Des essentiels choisis pour chaque style",
+    "newArrival": "Nouveautés",
+    "collection": "La collection",
+    "featured": "Sélection du moment",
+    "subtitle": "Des pièces faciles à porter, pensées pour votre quotidien",
+    "shopNow": "Découvrir la collection"
+  },
+  "categories": {
+    "women": "Femme",
+    "men": "Homme",
+    "dresses": "Robes",
+    "tops": "Hauts",
+    "shoes": "Chaussures",
+    "accessories": "Accessoires"
+  },
+  "products": {
+    "linenSet": "Ensemble en lin sable",
+    "midnightDress": "Robe satin nuit",
+    "essentialShirt": "Chemise essentielle",
+    "softKnit": "Maille douce écrue",
+    "citySneakers": "Baskets City",
+    "leatherBag": "Sac cuir signature",
+    "denimJacket": "Veste denim brut",
+    "satinTop": "Top satin ivoire"
+  },
+  "product": {
+    "price": "Prix",
+    "details": "Détails",
+    "category": "Catégorie",
+    "subcategory": "Sous-catégorie",
+    "brand": "Marque",
+    "code": "Référence",
+    "color": "Choisir une couleur",
+    "size": "Choisir une taille",
+    "quantity": "Choisir une quantité",
+    "addToCart": "Ajouter au panier",
+    "orderNow": "Commander",
+    "addToFavorites": "Ajouter aux favoris",
+    "review": "Avis clients",
+    "zoomHint": "Cliquez sur l'image pour zoomer",
+    "description": "Une pièce actuelle, confortable et facile à associer. Livraison disponible pour toutes les commandes.",
+    "colors": {
+      "black": "Noir",
+      "white": "Blanc",
+      "beige": "Beige",
+      "blue": "Bleu"
+    },
+    "sizes": {
+      "small": "Petit",
+      "medium": "Moyen",
+      "large": "Grand"
+    }
+  },
+  "search": {
+    "title": "Résultats de recherche",
+    "subtitle": "Trouvez la pièce qui vous ressemble",
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "results": "Résultats"
+  },
+  "auth": {
+    "loginTitle": "Connexion client",
+    "registerTitle": "Créer un compte",
+    "email": "Votre adresse e-mail",
+    "password": "Votre mot de passe",
+    "name": "Votre nom",
+    "confirmPassword": "Confirmer le mot de passe",
+    "login": "Se connecter",
+    "register": "Créer mon compte",
+    "forgot": "Mot de passe oublié ?",
+    "forgotLink": "Réinitialiser le mot de passe",
+    "newUser": "Nouveau client ?",
+    "alreadyUser": "Vous avez déjà un compte ?",
+    "registerLink": "S'inscrire",
+    "resetTitle": "Réinitialiser le mot de passe",
+    "pincode": "Votre code de vérification",
+    "newPassword": "Votre nouveau mot de passe"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Une question sur une pièce ? Écrivez-nous.",
+    "address": "4151 Ksar Jedid, El Gattar",
+    "email": "contact@forsa.com",
+    "name": "Votre nom",
+    "emailInput": "Votre e-mail",
+    "message": "Votre message",
+    "send": "Envoyer"
+  },
+  "notifications": {
+    "title": "Notification",
+    "status": "Non lue",
+    "date": "Date",
+    "details": "Voir les détails",
+    "modalTitle": "Détails de la notification",
+    "modalText": "Les nouveautés Forsa sont disponibles dans la collection.",
+    "close": "Fermer"
+  },
+  "favorites": {
+    "title": "Mes favoris",
+    "subtitle": "Les pièces que vous souhaitez retrouver",
+    "remove": "Retirer"
+  },
+  "cart": {
+    "quantity": "Quantité",
+    "price": "Prix",
+    "information": "Vos informations",
+    "city": "Choisir une ville",
+    "payment": "Mode de paiement",
+    "choose": "Choisir",
+    "cash": "Paiement à la livraison",
+    "card": "Carte bancaire",
+    "name": "Votre nom",
+    "address": "Adresse de livraison",
+    "confirm": "Confirmer la commande"
+  },
+  "profile": {
+    "title": "Mon profil",
+    "name": "Nom",
+    "email": "E-mail",
+    "history": "Historique des commandes",
+    "status": "Statut",
+    "pending": "En attente",
+    "review": "Laisser un avis"
+  },
+  "footer": {
+    "contact": "Contactez-nous",
+    "information": "Informations",
+    "purchase": "Conditions d'achat",
+    "privacy": "Politique de confidentialité",
+    "refund": "Politique de remboursement",
+    "company": "La marque",
+    "about": "À propos",
+    "contactLink": "Nous contacter",
+    "address": "Adresse",
+    "language": "Changer de langue",
+    "rights": "Tous droits réservés à Forsa 2026"
+  },
+  "common": {
+    "language": "Langue",
+    "home": "Accueil",
+    "library": "Catalogue",
+    "data": "Produit",
+    "collectionSubtitle": "Une sélection de pièces que vous allez aimer",
+    "remove": "Supprimer"
+  }
+}

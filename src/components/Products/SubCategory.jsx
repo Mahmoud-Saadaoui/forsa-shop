@@ -1,67 +1,33 @@
 import React from 'react'
-import { Container ,Row, Col,Card} from 'react-bootstrap'
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
-// import SideBarMenu from '../Home/SideBarMenu'
+import { Container, Row, Col, Breadcrumb } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import products from '../data'
+import ProductCard from './ProductCard'
 
-function SubCategory({filteredData}) {
-     console.log(filteredData);
+function SubCategory() {
+  const { t } = useTranslation()
+
   return (
-    <React.Fragment>
-     <Container className="text-center" fluid={true}>
-
-          <div className="breadbody">
-          <Breadcrumb>
-               <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-               <Breadcrumb.Item href="">
-                    Library
-               </Breadcrumb.Item>
-               <Breadcrumb.Item>Data</Breadcrumb.Item>
-          </Breadcrumb>
-          </div>
-
-          <div className="section-title text-center mb-55"><h2>  subcategory Products</h2>
-               <p>Some Of Our Exclusive Collection, You May Like</p>
-          </div>
-          <Row >
-
-               <Col className="p-1" lg={2} md={2} sm={6} >
-               <div>
-                    <Card className="image-box card w-100" >
-                         <img className="center" alt='' src="http://127.0.0.1:8000/upload/product/1724910411285630.jpeg" />
-                         <Card.Body>
-                              <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                              <p className="product-price-on-card">price : 100$</p>
-                         </Card.Body>
-                    </Card>
-               </div>
-               </Col>
-
-               <Col className="p-1" lg={2} md={2} sm={6} >
-               <div>
-                    <Card className="image-box card w-100" >
-                         <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724918399859789.jpeg" />
-                         <Card.Body>
-                              <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                              <p className="product-price-on-card">price : 100$</p>
-                         </Card.Body>
-                    </Card>
-               </div>
-               </Col>
-
-               <Col className="p-1" lg={2} md={2} sm={6} >
-               <div>
-                    <Card className="image-box card w-100" >
-                         <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724910411285630.jpeg" />
-                         <Card.Body>
-                              <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                              <p className="product-price-on-card">price : 100$</p>
-                         </Card.Body>
-                    </Card>
-               </div>
-               </Col>
-          </Row>
-     </Container>
-    </React.Fragment>
+    <Container className="text-center" fluid={true}>
+      <div className="breadbody">
+        <Breadcrumb>
+          <Breadcrumb.Item href="#">{t('search.home')}</Breadcrumb.Item>
+          <Breadcrumb.Item href="">{t('search.catalog')}</Breadcrumb.Item>
+          <Breadcrumb.Item>{t('search.results')}</Breadcrumb.Item>
+        </Breadcrumb>
+      </div>
+      <div className="section-title text-center mb-55">
+        <h2>{t('home.newArrival')}</h2>
+        <p>{t('home.categoriesSubtitle')}</p>
+      </div>
+      <Row>
+        {products.slice(4, 7).map((product) => (
+          <Col key={product.id} className="p-1" lg={4} md={4} sm={6}>
+            <ProductCard product={product} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 

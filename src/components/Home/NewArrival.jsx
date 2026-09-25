@@ -1,89 +1,49 @@
 import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import slickModule from 'react-slick'
+import products from '../data'
 import '../../assets/css/custom.css'
-import { Container, Row, Card } from 'react-bootstrap'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import ProductCard from '../Products/ProductCard'
+
+const Slider = slickModule.default || slickModule
 
 function NewArrival() {
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-   };
+  const { t } = useTranslation()
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    responsive: [
+      { breakpoint: 992, settings: { slidesToShow: 3 } },
+      { breakpoint: 576, settings: { slidesToShow: 1 } },
+    ],
+  }
 
   return (
-    <React.Fragment>
-        <Container className="text-center" fluid={true}>
+    <section className="home-section">
+      <Container className="text-center" fluid={true}>
         <div className="section-title text-center mb-55">
-            <h2> New Arrival    &nbsp;
-                <a href='/#' className="btn btn-sm ml-2 site-btn" ><i className="fa fa-angle-left"></i></a>
-                &nbsp;
-                <a href='/#' className="btn btn-sm ml-2 site-btn" ><i className="fa fa-angle-right"></i></a>
-            </h2>
-                <p>Some Of Our Exclusive Collection, You May Like</p>
-            </div>
-            <Row>
-                <Slider   {...settings}>
-                    <div>
-                        <Card className="image-box card" >
-                            <img className="center" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                            <Card.Body>
-                                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                <p className="product-price-on-card">price : 100$</p>
-                            </Card.Body>
-                        </Card>
-                    </div>
-
-
-                    <div>
-                    <Card className="image-box card" >
-                        <img className="center" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                        <Card.Body>
-                                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                <p className="product-price-on-card">price : 100$</p>
-                        </Card.Body>
-                    </Card>
-                </div>
-
-                <div>
-                <Card className="image-box card" >
-                    <img className="center" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                    <Card.Body>
-                        <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                        <p className="product-price-on-card">price : 100$</p>
-                    </Card.Body>
-                </Card>
-            </div>
-
-            <div>
-            <Card className="image-box card" >
-                <img className="center" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                <Card.Body>
-                    <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                    <p className="product-price-on-card">price : 100$</p>
-                </Card.Body>
-            </Card>
-    </div>
-
-    <div>
-    <Card className="image-box card" >
-            <img className="center" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-            <Card.Body>
-                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                <p className="product-price-on-card">price : 100$</p>
-            </Card.Body>
-    </Card>
-</div>
-                </Slider>
-            </Row>
-        </Container>
-               </React.Fragment>
+          <h2>{t('home.newArrival')}</h2>
+          <p>{t('home.categoriesSubtitle')}</p>
+        </div>
+        <Row>
+          <Slider {...settings}>
+            {products.map((product) => (
+              <div key={product.id} className="px-2">
+                <ProductCard product={product} className="image-box card" />
+              </div>
+            ))}
+          </Slider>
+        </Row>
+      </Container>
+    </section>
   )
 }
 

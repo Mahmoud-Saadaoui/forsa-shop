@@ -1,35 +1,35 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import LoginImg from '../../assets/images/login.webp'
-import {Link} from 'react-router-dom'
 
 function UserLogin() {
+  const { t } = useTranslation()
+
   return (
-     <React.Fragment>
-     <Container>
-          <Row>
-               <Col className="shadow-sm bg-white mt-2" md={12} lg={12} sm={12} xs={12}>
-                    <Row className="text-center">
-                         <Col className="d-flex justify-content-center" md={6} lg={6} sm={12} xs={12}>
-                              <Form className="onboardForm" >
-                                   <h4 className="section-title-login"> USER Login </h4>
-                                   <input className="form-control m-2" type="email" placeholder="Enter Your Email" />
-                                   <input className="form-control m-2" type="password" placeholder="Enter Your Password" />
-                                   <Button type="submit" className="btn btn-block m-2 site-btn-login"> Login </Button>
-                                   <br></br> <br></br>
-                                   <hr />
-                                   <p> <b> Forget My Password? </b><Link to='/forget_password' ><b> Froget Password </b> </Link> </p>
-                                   <p> <b> New User ? </b><Link to='/register'><b> Register </b> </Link> </p>
-                              </Form>
-                         </Col>
-                         <Col className="d-flex justify-content-center" md={6} lg={6} sm={12} xs={12}>
-                              <img className='onboardBanner' src={LoginImg} alt='' />
-                         </Col>
-                         </Row>
-               </Col>
+    <Container>
+      <Row>
+        <Col className="shadow-sm bg-white mt-2" md={12}>
+          <Row className="text-center">
+            <Col className="d-flex justify-content-center" md={6} sm={12}>
+              <Form className="onboardForm">
+                <h4 className="section-title-login">{t('auth.loginTitle')}</h4>
+                <input id="login-email" name="email" autoComplete="email" className="form-control m-2" type="email" placeholder={t('auth.email')} aria-label={t('auth.email')} />
+                <input id="login-password" name="password" autoComplete="current-password" className="form-control m-2" type="password" placeholder={t('auth.password')} aria-label={t('auth.password')} />
+                <Button type="submit" className="btn btn-block m-2 site-btn-login">{t('auth.login')}</Button>
+                <hr />
+                <p><b>{t('auth.forgot')}</b> <Link to="/forget_password"><b>{t('auth.forgotLink')}</b></Link></p>
+                <p><b>{t('auth.newUser')}</b> <Link to="/register"><b>{t('auth.registerLink')}</b></Link></p>
+              </Form>
+            </Col>
+            <Col className="d-flex justify-content-center" md={6} sm={12}>
+              <img className="onboardBanner" src={LoginImg} alt={t('auth.loginTitle')} />
+            </Col>
           </Row>
-     </Container>
-     </React.Fragment>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

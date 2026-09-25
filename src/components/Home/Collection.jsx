@@ -1,93 +1,30 @@
 import React from 'react'
-import'../../assets/css/custom.css'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import '../../assets/css/custom.css'
+import products from '../data'
+import ProductCard from '../Products/ProductCard'
 
 function Collection() {
+  const { t } = useTranslation()
+
   return (
-    <React.Fragment>
-        <Container className="text-center" fluid={true}>
-            <div className="section-title text-center mb-55"><h2> Collection</h2>
-                <p>Some Of Our Exclusive Collection, You May Like</p>
-            </div>
-            <Row>
-                <Col className="p-0" lg={3} md={3} sm={6} >
-                    <div>
-                        <Card className="image-box card w-100" >
-                            <img className="center w-75" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                            <Card.Body>
-                                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                <p className="product-price-on-card">price : 100$</p>
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </Col>
-
-
-            <Col className="p-0" lg={3} md={3} sm={6} >
-            <div>
-                <Card className="image-box card w-100" >
-                    <img className="center w-75" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                    <Card.Body>
-                        <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                        <p className="product-price-on-card">price : 100$</p>
-                    </Card.Body>
-                </Card>
-            </div>
-        </Col>
-
-        <Col className="p-0" lg={3} md={3} sm={6} >
-        <div>
-            <Card className="image-box card w-100" >
-                <img className="center w-75" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-                <Card.Body>
-                    <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                    <p className="product-price-on-card">price : 100$</p>
-                </Card.Body>
-            </Card>
+    <section id="collection" className="home-section">
+      <Container className="text-center" fluid={true}>
+        <div className="section-title text-center mb-55">
+          <h2>{t('home.collection')}</h2>
+          <p>{t('common.collectionSubtitle')}</p>
         </div>
-    </Col>
-
-    <Col className="p-0" lg={3} md={3} sm={6} >
-    <div>
-        <Card className="image-box card w-100" >
-            <img className="center w-75" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-            <Card.Body>
-                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                <p className="product-price-on-card">price : 100$</p>
-            </Card.Body>
-        </Card>
-    </div>
-</Col>
-
-
-<Col className="p-0" lg={3} md={3} sm={6} >
-<div>
-    <Card className="image-box card w-100" >
-        <img alt='' className="center w-75" src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-        <Card.Body>
-            <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-            <p className="product-price-on-card">price : 100$</p>
-        </Card.Body>
-    </Card>
-</div>
-</Col>
-
-<Col className="p-0" lg={3} md={3} sm={6} >
-<div>
-<Card className="image-box card w-100" >
-    <img className="center w-75" alt='' src="https://polycliniquehammamet.com/wp-content/uploads/2015/07/banner22.jpg" />
-    <Card.Body>
-        <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-        <p className="product-price-on-card">price : 100$</p>
-    </Card.Body>
-</Card>
-</div>
-</Col>
-
-            </Row>
-        </Container>
-     </React.Fragment>
-    )
+        <Row>
+          {products.slice(0, 6).map((product) => (
+            <Col key={product.id} className="p-1" lg={2} md={4} sm={6}>
+            <ProductCard product={product} imageClassName="center w-75" />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  )
 }
 
 export default Collection

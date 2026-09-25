@@ -1,39 +1,34 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import '../../assets/css/custom.css'
 
 function Contact() {
+  const { t } = useTranslation()
+
   return (
-    <React.Fragment>
-        <Container>
-            <Row className="p-2">
-                <Col className="shadow-sm bg-white mt-2" md={12} lg={12} sm={12} xs={12}>
-                    <Row className="text-center">
-
-                        <Col className="p-0 m-0" md={6} lg={6} sm={6} xs={6}>
-                                <br></br><br></br>
-                                <p>  meram, Sarayköy Mahallesi, 42155 Meram/Konya, Turkey  <br></br>
-                                    email : Support@ctp.com
-                                </p>
-                                <iframe title='iframe' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201549.65020671624!2d32.36639610609625!3d37.87869451502662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d08568d615f745%3A0x240dd0fc08060967!2sKonya!5e0!3m2!1snl!2str!4v1646560022419!5m2!1snl!2str" width="600" height="450" styles="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </Col>
-
-                        <Col className="justify-content-center d-flex" md={6} lg={6} sm={12} xs={12}>
-                            <Form id="contactForm" className="onboardForm" rows="4" cols="50" >
-                                <h4 className="section-title-login">CONTACT WITH US </h4>
-                                <h6 className="section-sub-title">Please Contact With Us </h6>
-                                <input className="form-control m-2" type="text" placeholder="Enter Your Name" />
-                                <input className="form-control m-2" type="email" placeholder="Enter Email" />
-                                <Form.Control className="form-control m-2" as="textarea" rows={3} placeholder="your Message" />
-                                <Button id="sendBtn" type="submit" className="btn btn-block m-2 site-btn-login"> Send </Button>
-                            </Form>
-                        </Col>
-
-                    </Row>
-                </Col>
-            </Row>
-        </Container>
-    </React.Fragment>
+    <Container>
+      <Row className="p-2">
+        <Col className="shadow-sm bg-white mt-2" md={12}>
+          <Row className="text-center">
+            <Col className="p-3 m-0" md={6} sm={12}>
+              <p>{t('contact.address')}<br />{t('contact.email')}</p>
+              <iframe title="forsa location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201549.65020671624!2d32.36639610609625!3d37.87869451502662" width="100%" height="350" style={{ border: 0 }} allowFullScreen loading="lazy"></iframe>
+            </Col>
+            <Col className="justify-content-center d-flex" md={6} sm={12}>
+              <Form id="contactForm" className="onboardForm">
+                <h4 className="section-title-login">{t('contact.title')}</h4>
+                <h6 className="section-sub-title">{t('contact.subtitle')}</h6>
+                <input id="contact-name" name="name" className="form-control m-2" type="text" placeholder={t('contact.name')} aria-label={t('contact.name')} />
+                <input id="contact-email" name="email" className="form-control m-2" type="email" placeholder={t('contact.emailInput')} aria-label={t('contact.emailInput')} />
+                <Form.Control id="contact-message" name="message" className="form-control m-2" as="textarea" rows={3} placeholder={t('contact.message')} aria-label={t('contact.message')} />
+                <Button id="sendBtn" type="submit" className="btn btn-block m-2 site-btn-login">{t('contact.send')}</Button>
+              </Form>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

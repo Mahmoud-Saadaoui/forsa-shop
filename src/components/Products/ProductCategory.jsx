@@ -1,115 +1,26 @@
 import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import products from '../data'
+import ProductCard from './ProductCard'
 
 function ProductCategory() {
+  const { t } = useTranslation()
+
   return (
-    <React.Fragment>
-        <Container className="text-center" fluid={true}>
-                         <div className="section-title text-center mb-55"><h2> Product Category</h2>
-
-                         </div>
-                         <Row>
-
-                        <Col className="p-0" lg={3} md={3} sm={6} >
-                             <div>
-                                  <Card className="image-box card w-100" >
-                                       <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1725816573871097.jpeg" />
-                                       <Card.Body>
-                                            <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                            <p className="product-price-on-card">price : 100$</p>
-                                       </Card.Body>
-                                  </Card>
-                             </div>
-                         </Col>
-
-
-                         <Col className="p-0" lg={3} md={3} sm={6} >
-                         <div>
-                              <Card className="image-box card w-100" >
-                                   <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724908814860957.jpeg" />
-                                   <Card.Body>
-                                        <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                        <p className="product-price-on-card">price : 100$</p>
-                                   </Card.Body>
-                              </Card>
-                         </div>
-                     </Col>
-
-                     <Col className="p-0" lg={3} md={3} sm={6} >
-                     <div>
-                          <Card className="image-box card w-100" >
-                               <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724919421062484.jpeg" />
-                               <Card.Body>
-                                    <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                    <p className="product-price-on-card">price : 100$</p>
-                               </Card.Body>
-                          </Card>
-                     </div>
-                 </Col>
-
-                 <Col className="p-0" lg={3} md={3} sm={6} >
-                 <div>
-                      <Card className="image-box card w-100" >
-                           <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1725816573871097.jpeg" />
-                           <Card.Body>
-                                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                <p className="product-price-on-card">price : 100$</p>
-                           </Card.Body>
-                      </Card>
-                 </div>
-             </Col>
-
-
-             <Col className="p-0" lg={3} md={3} sm={6} >
-             <div>
-                  <Card className="image-box card w-100" >
-                       <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724919421062484.jpeg" />
-                       <Card.Body>
-                            <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                            <p className="product-price-on-card">price : 100$</p>
-                       </Card.Body>
-                  </Card>
-             </div>
-         </Col>
-
-         <Col className="p-0" lg={3} md={3} sm={6} >
-         <div>
-              <Card className="image-box card w-100" >
-                   <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724908814860957.jpeg" />
-                   <Card.Body>
-                        <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                        <p className="product-price-on-card">price : 100$</p>
-                   </Card.Body>
-              </Card>
-         </div>
-     </Col>
-     <Col className="p-0" lg={3} md={3} sm={6} >
-     <div>
-          <Card className="image-box card w-100" >
-               <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724919421062484.jpeg" />
-               <Card.Body>
-                    <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                    <p className="product-price-on-card">price : 100$</p>
-               </Card.Body>
-          </Card>
-     </div>
- </Col>
-
- <Col className="p-0" lg={3} md={3} sm={6} >
- <div>
-      <Card className="image-box card w-100" >
-           <img className="center w-75" alt='' src="http://127.0.0.1:8000/upload/product/1724908814860957.jpeg" />
-           <Card.Body>
-                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                <p className="product-price-on-card">price : 100$</p>
-           </Card.Body>
-      </Card>
- </div>
-</Col>
-
-                         </Row>
-                    </Container>
-    </React.Fragment>
+    <Container className="text-center" fluid={true}>
+      <div className="section-title text-center mb-55">
+        <h2>{t('home.categories')}</h2>
+        <p>{t('home.categoriesSubtitle')}</p>
+      </div>
+      <Row>
+        {products.map((product) => (
+          <Col key={product.id} className="p-1" lg={3} md={4} sm={6}>
+            <ProductCard product={product} imageClassName="center w-75" />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 

@@ -1,90 +1,47 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import products from '../data'
 
 function OrderList() {
+  const { t } = useTranslation()
+
   return (
-    <React.Fragment>
-        <Container className="text-center" fluid={true}>
-            <div className="section-title text-center mb-55">
-                <h2> User Profile </h2>
-            </div>
-        </Container>
-        <Container  >
-            <Row className="justify-content-center">
-                <Col lg={6} md={6} sm={12}  >
-                    <ul className="list-group">
-                            <li className="list-group-item">Name :  nezar </li>
-                            <li className="list-group-item">Email :  nezar@gmail.com </li>
-                    </ul>
+    <>
+      <Container className="text-center" fluid={true}>
+        <div className="section-title text-center mb-55"><h2>{t('profile.title')}</h2></div>
+      </Container>
+      <Container>
+        <Row className="justify-content-center">
+          <Col lg={6} md={6} sm={12}>
+            <ul className="list-group">
+              <li className="list-group-item">{t('profile.name')} : Mahmoud</li>
+              <li className="list-group-item">{t('profile.email')} : mahmoud@mail.com</li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <div className="section-title text-center mb-55"><h2>{t('profile.history')}</h2></div>
+        <Card>
+          <Card.Body>
+            <Row>
+              {products.slice(0, 4).map((product) => (
+                <Col key={product.id} md={6} sm={12}>
+                  <h5 className="product-name">{t(product.nameKey)}</h5>
+                  <h6>{t('cart.quantity')} = 1</h6>
+                  <p>{t('product.sizes.medium')} | {t('product.colors.black')}</p>
+                  <h6>{t('cart.price')} = {product.price} €</h6>
+                  <h6>{t('profile.status')} = {t('profile.pending')}</h6>
+                  <Button className="btn btn-danger">{t('profile.review')}</Button>
+                  <hr />
                 </Col>
+              ))}
             </Row>
-        </Container>
-        <Container >
-            <div className="section-title text-center mb-55">
-                <h2> order history by(Nizar ) </h2>
-            </div>
-            <Card >
-                <Card.Body>
-                    <Row md={2} lg={2} sm={6} xs={6}>
-                            <div>
-                                <Col md={12} lg={12} sm={6} xs={6}>
-                                    <h5 className="product-name">Product Name </h5>
-                                    <h6> Quantity = 7 </h6>
-                                    <p>large | red</p>
-                                    <h6>Price = 10 x 7 = 70$</h6>
-                                    <h6>Stauts = pending </h6>
-                                </Col>
-                                <Button className="btn btn-danger">Post Review </Button>
-                                <hr></hr>
-                            </div>
-
-
-                            <div>
-                                <Col md={12} lg={12} sm={6} xs={6}>
-                                    <h5 className="product-name">Product Name </h5>
-                                    <h6> Quantity = 7 </h6>
-                                    <p>large | red</p>
-                                    <h6>Price = 10 x 7 = 70$</h6>
-                                    <h6>Stauts = pending </h6>
-                                </Col>
-                                <Button className="btn btn-danger">Post Review </Button>
-                                <hr></hr>
-                            </div>
-
-                    </Row>
-
-                    <Row md={2} lg={2} sm={6} xs={6}>
-                            <div>
-                                <Col md={12} lg={12} sm={6} xs={6}>
-                                    <h5 className="product-name">Product Name </h5>
-                                    <h6> Quantity = 7 </h6>
-                                    <p>large | red</p>
-                                    <h6>Price = 10 x 7 = 70$</h6>
-                                    <h6>Stauts = pending </h6>
-                                </Col>
-                                <Button className="btn btn-danger">Post Review </Button>
-                                <hr></hr>
-                            </div>
-
-
-                            <div>
-                                <Col md={12} lg={12} sm={6} xs={6}>
-                                    <h5 className="product-name">Product Name </h5>
-                                    <h6> Quantity = 7 </h6>
-                                    <p>large | red</p>
-                                    <h6>Price = 10 x 7 = 70$</h6>
-                                    <h6>Stauts = pending </h6>
-                                </Col>
-                                <Button className="btn btn-danger">Post Review </Button>
-                                <hr></hr>
-                            </div>
-
-                    </Row>
-                </Card.Body>
-            </Card>
-
-        </Container>
-    </React.Fragment>
+          </Card.Body>
+        </Card>
+      </Container>
+    </>
   )
 }
 

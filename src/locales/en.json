@@ -1,0 +1,158 @@
+{
+  "brand": "Forsa",
+  "nav": {
+    "search": "Search clothing",
+    "cart": "items",
+    "favorites": "Favorites",
+    "notifications": "Notifications",
+    "login": "Log in",
+    "profile": "Profile"
+  },
+  "home": {
+    "categories": "Categories",
+    "categoriesSubtitle": "Selected essentials for every style",
+    "newArrival": "New arrivals",
+    "collection": "The collection",
+    "featured": "Featured edit",
+    "subtitle": "Easy-to-wear pieces made for everyday life",
+    "shopNow": "Explore the collection"
+  },
+  "categories": {
+    "women": "Women",
+    "men": "Men",
+    "dresses": "Dresses",
+    "tops": "Tops",
+    "shoes": "Shoes",
+    "accessories": "Accessories"
+  },
+  "products": {
+    "linenSet": "Sand linen set",
+    "midnightDress": "Midnight satin dress",
+    "essentialShirt": "Essential shirt",
+    "softKnit": "Soft ecru knit",
+    "citySneakers": "City sneakers",
+    "leatherBag": "Signature leather bag",
+    "denimJacket": "Raw denim jacket",
+    "satinTop": "Ivory satin top"
+  },
+  "product": {
+    "price": "Price",
+    "details": "Details",
+    "category": "Category",
+    "subcategory": "Subcategory",
+    "brand": "Brand",
+    "code": "Product code",
+    "color": "Choose a color",
+    "size": "Choose a size",
+    "quantity": "Choose quantity",
+    "addToCart": "Add to cart",
+    "orderNow": "Order now",
+    "addToFavorites": "Add to favorites",
+    "review": "Customer reviews",
+    "zoomHint": "Click the image to zoom",
+    "description": "A contemporary, comfortable piece that is easy to style. Delivery is available for every order.",
+    "colors": {
+      "black": "Black",
+      "white": "White",
+      "beige": "Beige",
+      "blue": "Blue"
+    },
+    "sizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    }
+  },
+  "search": {
+    "title": "Search results",
+    "subtitle": "Find the piece that feels like you",
+    "home": "Home",
+    "catalog": "Catalog",
+    "results": "Results"
+  },
+  "auth": {
+    "loginTitle": "Customer login",
+    "registerTitle": "Create an account",
+    "email": "Your email address",
+    "password": "Your password",
+    "name": "Your name",
+    "confirmPassword": "Confirm password",
+    "login": "Log in",
+    "register": "Create my account",
+    "forgot": "Forgot your password?",
+    "forgotLink": "Reset password",
+    "newUser": "New customer?",
+    "alreadyUser": "Already have an account?",
+    "registerLink": "Sign up",
+    "resetTitle": "Reset password",
+    "pincode": "Your verification code",
+    "newPassword": "Your new password"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Have a question about a piece? Write to us.",
+    "address": "4151 Ksar Jedid, El Gattar",
+    "email": "contact@forsa.com",
+    "name": "Your name",
+    "emailInput": "Your email",
+    "message": "Your message",
+    "send": "Send"
+  },
+  "notifications": {
+    "title": "Notification",
+    "status": "Unread",
+    "date": "Date",
+    "details": "View details",
+    "modalTitle": "Notification details",
+    "modalText": "New Forsa pieces are now available in the collection.",
+    "close": "Close"
+  },
+  "favorites": {
+    "title": "My favorites",
+    "subtitle": "Pieces you want to keep close",
+    "remove": "Remove"
+  },
+  "cart": {
+    "quantity": "Quantity",
+    "price": "Price",
+    "information": "Your information",
+    "city": "Choose a city",
+    "payment": "Payment method",
+    "choose": "Choose",
+    "cash": "Cash on delivery",
+    "card": "Bank card",
+    "name": "Your name",
+    "address": "Delivery address",
+    "confirm": "Confirm order"
+  },
+  "profile": {
+    "title": "My profile",
+    "name": "Name",
+    "email": "Email",
+    "history": "Order history",
+    "status": "Status",
+    "pending": "Pending",
+    "review": "Post a review"
+  },
+  "footer": {
+    "contact": "Contact us",
+    "information": "Information",
+    "purchase": "Purchase policy",
+    "privacy": "Privacy policy",
+    "refund": "Refund policy",
+    "company": "The brand",
+    "about": "About us",
+    "contactLink": "Contact us",
+    "address": "Address",
+    "language": "Change your language",
+    "rights": "All rights reserved to Forsa 2026"
+  },
+  "common": {
+    "language": "Language",
+    "home": "Home",
+    "library": "Catalog",
+    "data": "Product",
+    "collectionSubtitle": "A selection of pieces you will love",
+    "remove": "Remove"
+  }
+}

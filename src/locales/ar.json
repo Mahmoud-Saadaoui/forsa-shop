@@ -1,0 +1,158 @@
+{
+  "brand": "Forsa",
+  "nav": {
+    "search": "ابحث عن ملابس",
+    "cart": "منتجات",
+    "favorites": "المفضلة",
+    "notifications": "الإشعارات",
+    "login": "تسجيل الدخول",
+    "profile": "الملف الشخصي"
+  },
+  "home": {
+    "categories": "الفئات",
+    "categoriesSubtitle": "اختيارات أساسية لكل أسلوب",
+    "newArrival": "وصل حديثا",
+    "collection": "المجموعة",
+    "featured": "اختياراتنا",
+    "subtitle": "قطع مريحة وسهلة التنسيق لحياتك اليومية",
+    "shopNow": "اكتشف المجموعة"
+  },
+  "categories": {
+    "women": "نساء",
+    "men": "رجال",
+    "dresses": "فساتين",
+    "tops": "قمصان",
+    "shoes": "أحذية",
+    "accessories": "إكسسوارات"
+  },
+  "products": {
+    "linenSet": "طقم كتان رملي",
+    "midnightDress": "فستان ساتان ليلي",
+    "essentialShirt": "قميص أساسي",
+    "softKnit": "كنزة ناعمة بلون عاجي",
+    "citySneakers": "حذاء رياضي للمدينة",
+    "leatherBag": "حقيبة جلد مميزة",
+    "denimJacket": "سترة جينز خام",
+    "satinTop": "قميص ساتان عاجي"
+  },
+  "product": {
+    "price": "السعر",
+    "details": "التفاصيل",
+    "category": "الفئة",
+    "subcategory": "الفئة الفرعية",
+    "brand": "العلامة التجارية",
+    "code": "رمز المنتج",
+    "color": "اختر اللون",
+    "size": "اختر المقاس",
+    "quantity": "اختر الكمية",
+    "addToCart": "أضف إلى السلة",
+    "orderNow": "اطلب الآن",
+    "addToFavorites": "أضف إلى المفضلة",
+    "review": "آراء العملاء",
+    "zoomHint": "اضغط على الصورة للتكبير",
+    "description": "قطعة عصرية ومريحة وسهلة التنسيق. التوصيل متاح مع كل طلب.",
+    "colors": {
+      "black": "أسود",
+      "white": "أبيض",
+      "beige": "بيج",
+      "blue": "أزرق"
+    },
+    "sizes": {
+      "small": "صغير",
+      "medium": "متوسط",
+      "large": "كبير"
+    }
+  },
+  "search": {
+    "title": "نتائج البحث",
+    "subtitle": "اعثر على القطعة التي تشبهك",
+    "home": "الرئيسية",
+    "catalog": "الكتالوج",
+    "results": "النتائج"
+  },
+  "auth": {
+    "loginTitle": "تسجيل دخول العميل",
+    "registerTitle": "إنشاء حساب",
+    "email": "بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "name": "اسمك",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "login": "دخول",
+    "register": "إنشاء حسابي",
+    "forgot": "هل نسيت كلمة المرور؟",
+    "forgotLink": "إعادة تعيين كلمة المرور",
+    "newUser": "عميل جديد؟",
+    "alreadyUser": "لديك حساب؟",
+    "registerLink": "التسجيل",
+    "resetTitle": "إعادة تعيين كلمة المرور",
+    "pincode": "رمز التحقق",
+    "newPassword": "كلمة المرور الجديدة"
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "subtitle": "لديك سؤال عن قطعة؟ اكتب لنا.",
+    "address": "4151 قصر جديد، القطار",
+    "email": "contact@forsa.com",
+    "name": "اسمك",
+    "emailInput": "بريدك الإلكتروني",
+    "message": "رسالتك",
+    "send": "إرسال"
+  },
+  "notifications": {
+    "title": "إشعار",
+    "status": "غير مقروء",
+    "date": "التاريخ",
+    "details": "عرض التفاصيل",
+    "modalTitle": "تفاصيل الإشعار",
+    "modalText": "قطع أفارييت الجديدة متوفرة الآن في المجموعة.",
+    "close": "إغلاق"
+  },
+  "favorites": {
+    "title": "المفضلة",
+    "subtitle": "القطع التي تريد الاحتفاظ بها",
+    "remove": "إزالة"
+  },
+  "cart": {
+    "quantity": "الكمية",
+    "price": "السعر",
+    "information": "معلوماتك",
+    "city": "اختر المدينة",
+    "payment": "طريقة الدفع",
+    "choose": "اختر",
+    "cash": "الدفع عند التوصيل",
+    "card": "بطاقة بنكية",
+    "name": "اسمك",
+    "address": "عنوان التوصيل",
+    "confirm": "تأكيد الطلب"
+  },
+  "profile": {
+    "title": "ملفي الشخصي",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "history": "سجل الطلبات",
+    "status": "الحالة",
+    "pending": "قيد الانتظار",
+    "review": "أضف تقييما"
+  },
+  "footer": {
+    "contact": "اتصل بنا",
+    "information": "معلومات",
+    "purchase": "سياسة الشراء",
+    "privacy": "سياسة الخصوصية",
+    "refund": "سياسة الاسترجاع",
+    "company": "العلامة التجارية",
+    "about": "من نحن",
+    "contactLink": "اتصل بنا",
+    "address": "العنوان",
+    "language": "تغيير اللغة",
+    "rights": "جميع الحقوق محفوظة forsa 2026"
+  },
+  "common": {
+    "language": "اللغة",
+    "home": "الرئيسية",
+    "library": "الكتالوج",
+    "data": "المنتج",
+    "collectionSubtitle": "اختيارات من القطع التي ستحبها",
+    "remove": "حذف"
+  }
+}

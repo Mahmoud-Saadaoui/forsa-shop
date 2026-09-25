@@ -1,41 +1,31 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
+import products from '../data'
 
 function Favorite() {
-  return (
-    <React.Fragment>
-        <Container className="text-center" fluid={true}>
-            <div className="section-title text-center mb-55"><h2> Favorate produts</h2>
-                    <p>Some Of Our Exclusive Collection, You May Like</p>
-            </div>
-            <Row>
-                <Col className="p-0" lg={3} md={3} sm={6} >
-                    <div>
-                        <Card className="image-box card w-100" >
-                            <img alt='' className="center w-75" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/01/c5/bd/la-favorite.jpg?w=1200&h=-1&s=1" />
-                            <Card.Body>
-                                <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
+  const { t } = useTranslation()
 
-                                <Button  className="btn-danger btn-sm"> <i className="fa fa-trash-alt"></i> Remove </Button>  
-                            </Card.Body>
-                        </Card>
-                    </div>
-                </Col>
-                <Col className="p-0" lg={3} md={3} sm={6} >
-                    <div>
-                            <Card className="image-box card w-100" >
-                                <img alt='' className="center w-75" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/01/c5/bd/la-favorite.jpg?w=1200&h=-1&s=1" />
-                                <Card.Body>
-                                    <p className="product-name-on-card">Perfect Homes Webster Engineered Wood TV</p>
-                                    <Button  className="btn-danger btn-sm"> <i className="fa fa-trash-alt"></i> Remove </Button>
-                                </Card.Body>
-                            </Card>
-                    </div>
-                </Col>
-                
-            </Row>
-        </Container>
-    </React.Fragment>
+  return (
+    <Container className="text-center" fluid={true}>
+      <div className="section-title text-center mb-55">
+        <h2>{t('favorites.title')}</h2>
+        <p>{t('favorites.subtitle')}</p>
+      </div>
+      <Row>
+        {products.slice(0, 2).map((product) => (
+          <Col key={product.id} className="p-1" lg={3} md={4} sm={6}>
+            <Card className="image-box card w-100">
+              <img alt={t(product.nameKey)} className="center w-75" src={product.image} />
+              <Card.Body>
+                <p className="product-name-on-card">{t(product.nameKey)}</p>
+                <Button className="btn-danger btn-sm"><i className="fa fa-trash-alt"></i> {t('favorites.remove')}</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 
